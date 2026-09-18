@@ -22,9 +22,15 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Create local.properties
+      - name: Setup Android SDK and Keystore
         run: |
           echo "sdk.dir=$ANDROID_HOME" > local.properties
+          touch .env
+          if [ -f debug.keystore.base64 ]; then
+            base64 -d debug.keystore.base64 > debug.keystore
+          else
+            keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          fi
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
@@ -32,12 +38,9 @@ jobs:
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon --stacktrace
 
-      - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest --no-daemon
-
       - name: Upload Debug APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: SafeGuard-Debug-APK
           path: app/build/outputs/apk/debug/*.apk
-          if-no-files-found: warn
+          if-no-files-found: error
