@@ -1,0 +1,28 @@
+telegram_otp_retriever/
+├── android/
+│   └── app/src/main/
+│       ├── AndroidManifest.xml
+│       └── kotlin/com/example/otpretriever/
+│           ├── MainActivity.kt
+│           └── OverlayService.kt
+├── lib/
+│   ├── main.dart
+│   ├── models/
+│   │   ├── account_model.dart
+│   │   └── settings_model.dart
+│   ├── services/
+│   │   ├── storage_service.dart
+│   │   ├── imap_service.dart
+│   │   ├── overlay_service.dart
+│   │   ├── otp_parser.dart
+│   │   ├── case_engine.dart
+│   │   └── name_generator.dart
+│   ├── screens/
+│   │   ├── home_screen.dart
+│   │   ├── settings_screen.dart
+│   │   └── accounts_screen.dart
+│   ├── widgets/
+│   │   └── overlay_widgets.dart
+│   └── utils/
+│       └── constants.dart
+├── pubspec.yaml
