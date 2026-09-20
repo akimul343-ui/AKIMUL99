@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Safe Guard</string>
-    <string name="device_admin_label">Safe Guard Protection</string>
-    <string name="device_admin_description">Enforces anti-uninstall and tamper-proof protection so the phone lock and security cannot be bypassed or removed without administrator credentials.</string>
-    <string name="device_admin_disable_warning">Safe Guard Anti-Uninstall Protection is active. Administrator PIN verification is required to deactivate.</string>
-</resources>
