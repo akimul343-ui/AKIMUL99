@@ -1,5 +1,5 @@
 name: telegram_otp_retriever
-description: "Telegram OTP Retriever App with Overlay & Bangla Settings"
+description: "Telegram OTP Retriever App"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -14,7 +14,7 @@ dependencies:
   flutter_secure_storage: ^9.0.0
   shared_preferences: ^2.2.2
   vibration: ^1.8.4
-  audioplayers: ^6.0.0
+  audioplayers: ^6.1.0
   clipboard: ^0.1.3
 
 dev_dependencies:
