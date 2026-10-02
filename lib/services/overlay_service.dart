@@ -1,6 +1,6 @@
-import 'dart:ui';
+import 'dartt:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter_clipboard/flutter_clipboard.dart';
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 import '../utils/case_engine.dart';
 import '../utils/name_generator.dart';
